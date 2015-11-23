@@ -1,0 +1,100 @@
+/*Basic Page Layout & Sidebar*/
+body {
+  margin: 0;
+  padding: 0;
+}
+#wrapper {
+  padding-left: 250px;
+  transition: all 0.4s ease 0s;
+}
+
+#sidebar {
+  margin-left: -250px;
+  left: 250px;
+  width: 250px;
+  background-color: rgb(230,230,230);
+  color:white;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+
+#page-content {
+  width: 100%;
+}
+#sidebar-brand {
+  background-image: url(../images/iris.png);
+  height:250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+    #sidebar-brand > h1 {
+      margin-top: 0;
+      padding-top:75px;
+      text-align: center;
+      font-weight:200;
+      color:black;
+    }
+
+.sidebar-nav {
+  position: absolute;
+  top: 200px;
+  width: 250px;
+  list-style: none;
+  color:white;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-li {
+  background-color:white;
+  color:black;
+  border-radius:0;
+}
+
+    .sidebar-li:first-child {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .sidebar-li:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+#sidebar-brand {
+  height: 25%;
+
+}
+
+@media (max-width:767px) {
+
+    #wrapper {
+      padding-left: 0;
+    }
+
+    #sidebar {
+      left: 0;
+    }
+
+    #wrapper.active {
+      position: relative;
+      left: 250px;
+    }
+
+    #wrapper.active #sidebar {
+      left: 250px;
+      width: 250px;
+      transition: all 0.4s ease 0s;
+    }
+
+}
+/*End Basic Page Layout & Sidebar*/
+
